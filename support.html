@@ -37,8 +37,8 @@
     width: 34px;
     height: 34px;
     border-radius: 9px;
-    background: linear-gradient(135deg, var(--accent), #8b8ef7);
     flex-shrink: 0;
+    object-fit: cover;
   }
   header h1 {
     font-size: 17px;
@@ -112,9 +112,9 @@
 
 <header>
   <div class="inner">
-    <div class="mark" aria-hidden="true"></div>
+    <img src="./logo.png" alt="iResumeMeet" class="mark">
     <h1>iResumeMeet</h1>
-    <div class="lang-switch"><a href="./legal/support-es.html">Español</a></div>
+    <div class="lang-switch"><a href="./support-es.html">Español</a></div>
   </div>
 </header>
 
@@ -140,9 +140,11 @@
     <h3>How do minutes and pricing work?</h3>
     <p>
       Every new account starts with free minutes to try the app. When you need more, you can
-      purchase a minutes package from the Paywall — purchased minutes never expire, and there's
-      no recurring subscription. Sign in with Apple to keep your balance safe if you switch
-      devices.
+      purchase a minutes package from the Paywall — there's no recurring subscription, and your
+      balance doesn't expire just from sitting unused for a few weeks or months. That said, if
+      your account goes 12 months without any AI processing activity (transcribing or translating
+      a meeting), your balance resets to the free starting allowance and any additional purchased
+      minutes are forfeited. Sign in with Apple to keep your balance safe if you switch devices.
     </p>
   </section>
 
