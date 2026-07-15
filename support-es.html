@@ -37,8 +37,8 @@
     width: 34px;
     height: 34px;
     border-radius: 9px;
-    background: linear-gradient(135deg, var(--accent), #8b8ef7);
     flex-shrink: 0;
+    object-fit: cover;
   }
   header h1 {
     font-size: 17px;
@@ -112,7 +112,7 @@
 
 <header>
   <div class="inner">
-    <div class="mark" aria-hidden="true"></div>
+    <img src="./logo.png" alt="iResumeMeet" class="mark">
     <h1>iResumeMeet</h1>
     <div class="lang-switch"><a href="./support.html">English</a></div>
   </div>
@@ -140,9 +140,12 @@
     <h3>¿Cómo funcionan los minutos y los precios?</h3>
     <p>
       Cada cuenta nueva arranca con minutos gratis para probar la app. Cuando necesités más,
-      podés comprar un paquete de minutos desde el Paywall — los minutos comprados nunca vencen,
-      y no hay ninguna suscripción recurrente. Iniciá sesión con Apple ID para mantener tu saldo
-      seguro si cambiás de dispositivo.
+      podés comprar un paquete de minutos desde el Paywall — no hay ninguna suscripción
+      recurrente, y tu saldo no vence solo por quedar sin usar algunas semanas o meses. Dicho
+      esto, si tu cuenta pasa 12 meses sin ninguna actividad de procesamiento con IA (transcribir
+      o traducir una reunión), tu saldo vuelve al monto gratuito inicial y cualquier minuto
+      comprado adicional se pierde. Iniciá sesión con Apple ID para mantener tu saldo seguro si
+      cambiás de dispositivo.
     </p>
   </section>
 
