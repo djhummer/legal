@@ -107,6 +107,41 @@
     font-size: 13px;
   }
   footer a { color: var(--accent); }
+  section ul.provider-list {
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  section ul.provider-list li {
+    font-size: 15.5px;
+    color: var(--ink);
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+  section ul.provider-list li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 4px;
+  }
+  table.provider-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 14.5px;
+  }
+  table.provider-table th, table.provider-table td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+  table.provider-table th {
+    color: var(--ink-secondary);
+    font-weight: 600;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
 </style>
 </head>
 <body>
@@ -160,18 +195,22 @@
   <section>
     <h3><span class="num">3.</span> Ephemeral AI Processing and Third-Party AI Providers</h3>
     <p>
-      To generate the transcript and smart summary, your audio is transmitted via secure,
-      encrypted connections to two third-party AI service providers, with your explicit consent
-      requested in the app before the first processing: <strong>ElevenLabs</strong> (which
-      converts your audio into text) and <strong>OpenAI</strong> (which generates the summary and
-      translations from that text). For longer recordings, the audio may be temporarily divided
-      into smaller segments so it can be processed more reliably, but each segment is handled
-      under the same guarantee described below. Once the text is generated and sent back to your
-      device, the temporary audio file (or each temporary segment) is immediately deleted from
-      our servers. We have configured both providers so that your content is not stored in their
-      dashboards nor used to train AI models. Both providers maintain their own privacy and
-      security practices consistent with the protections described in this policy.
+      To generate the transcript, summary, and translations, your content is transmitted via
+      secure, encrypted connections to specialized third-party AI service providers, with your
+      explicit consent requested in the app before this happens for the first time. We limit
+      what we share, and how it's handled, to protect your privacy:
     </p>
+    <ul class="provider-list">
+      <li><strong>Data Minimization</strong> — we only send the specific audio or text data necessary to perform the requested AI task, nothing more.</li>
+      <li><strong>No Model Training</strong> — we have configured our integration with these providers so that your recordings and text are not used to train their AI models.</li>
+      <li><strong>Ephemeral Storage</strong> — for longer recordings, the audio may be temporarily divided into smaller segments so it can be processed more reliably; once the text is generated and sent back to your device, the temporary audio (or each segment) is immediately deleted from our servers.</li>
+      <li><strong>Equivalent Protection</strong> — our AI providers are bound by their own data protection agreements and terms of service, which we have reviewed to ensure they provide a level of protection consistent with this Privacy Policy.</li>
+    </ul>
+    <table class="provider-table">
+      <tr><th>Provider</th><th>Purpose</th></tr>
+      <tr><td>ElevenLabs</td><td>Converts your audio recording into text (speech-to-text)</td></tr>
+      <tr><td>OpenAI</td><td>Generates the summary, action items, and translations from that text</td></tr>
+    </table>
   </section>
 
   <section>
