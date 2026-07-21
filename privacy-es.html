@@ -107,6 +107,41 @@
     font-size: 13px;
   }
   footer a { color: var(--accent); }
+  section ul.provider-list {
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  section ul.provider-list li {
+    font-size: 15.5px;
+    color: var(--ink);
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+  section ul.provider-list li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 4px;
+  }
+  table.provider-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 14.5px;
+  }
+  table.provider-table th, table.provider-table td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+  table.provider-table th {
+    color: var(--ink-secondary);
+    font-weight: 600;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
 </style>
 </head>
 <body>
@@ -162,20 +197,22 @@
   <section>
     <h3><span class="num">3.</span> Procesamiento de IA Efímero y Proveedores de IA de Terceros</h3>
     <p>
-      Para generar la transcripción y el resumen inteligente, tu audio se transmite mediante
-      conexiones seguras y cifradas a dos proveedores de servicios de IA de terceros, con tu
-      consentimiento explícito solicitado en la app antes del primer procesamiento:
-      <strong>ElevenLabs</strong> (que convierte tu audio en texto) y <strong>OpenAI</strong>
-      (que genera el resumen y las traducciones a partir de ese texto). Para grabaciones más
-      largas, el audio puede dividirse temporalmente en fragmentos más pequeños para procesarse
-      de forma más confiable, pero cada fragmento se maneja bajo la misma garantía descrita a
-      continuación. Una vez que el texto se genera y se envía de vuelta a tu dispositivo, el
-      archivo de audio temporal (o cada fragmento temporal) se elimina inmediatamente de nuestros
-      servidores. Hemos configurado ambos proveedores para que tu contenido no se almacene en sus
-      paneles ni se utilice para entrenar modelos de IA. Ambos proveedores mantienen sus propias
-      prácticas de privacidad y seguridad consistentes con las protecciones descritas en esta
-      política.
+      Para generar la transcripción, el resumen y las traducciones, tu contenido se transmite
+      mediante conexiones seguras y cifradas a proveedores especializados de servicios de IA de
+      terceros, con tu consentimiento explícito solicitado en la app antes de que esto ocurra
+      por primera vez. Limitamos qué compartimos, y cómo se maneja, para proteger tu privacidad:
     </p>
+    <ul class="provider-list">
+      <li><strong>Minimización de Datos</strong> — solo enviamos el audio o texto específico necesario para realizar la tarea de IA solicitada, nada más.</li>
+      <li><strong>Sin Entrenamiento de Modelos</strong> — configuramos nuestra integración con estos proveedores para que tus grabaciones y textos no se usen para entrenar sus modelos de IA.</li>
+      <li><strong>Almacenamiento Efímero</strong> — para grabaciones más largas, el audio puede dividirse temporalmente en fragmentos más pequeños para procesarse de forma más confiable; una vez que el texto se genera y se envía de vuelta a tu dispositivo, el audio temporal (o cada fragmento) se elimina inmediatamente de nuestros servidores.</li>
+      <li><strong>Protección Equivalente</strong> — nuestros proveedores de IA están sujetos a sus propios acuerdos y términos de protección de datos, que hemos revisado para asegurar que ofrecen un nivel de protección consistente con esta Política de Privacidad.</li>
+    </ul>
+    <table class="provider-table">
+      <tr><th>Proveedor</th><th>Propósito</th></tr>
+      <tr><td>ElevenLabs</td><td>Convierte tu grabación de audio en texto (voz a texto)</td></tr>
+      <tr><td>OpenAI</td><td>Genera el resumen, el plan de acción y las traducciones a partir de ese texto</td></tr>
+    </table>
   </section>
 
   <section>
