@@ -107,6 +107,20 @@
     font-size: 13px;
   }
   footer a { color: var(--accent); }
+  .footer-nav {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+  .footer-nav a {
+    color: var(--ink-secondary);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .footer-nav a:hover { color: var(--accent); }
+  .footer-nav .sep {
+    color: var(--rule);
+    margin: 0 8px;
+  }
   section ul.provider-list {
     margin: 12px 0 0;
     padding: 0;
@@ -175,7 +189,13 @@
       minutes acquired, and the purchase date, linked to your device and/or account identifier.
       This record is necessary to correctly credit your balance and for accounting and customer
       support purposes, and may be retained for the period required by applicable tax and
-      accounting regulations even if you later request deletion of your account.
+      accounting regulations even if you later request deletion of your account. To prevent
+      abuse of our one-time free trial allowance, we also keep a non-identifying technical
+      signal — a one-way cryptographic hash of your device and/or account identifier, which
+      cannot be reversed to reveal either — indicating that a free trial has already been
+      claimed. This signal contains no personal information by itself and is retained even
+      after account deletion, solely to recognize a device or account that has already received
+      the free allowance.
     </p>
   </section>
 
@@ -229,9 +249,11 @@
     <p>
       You have complete control over your information. You can request the complete deletion of
       your account from our servers at any time, which will delete your associated email address
-      and your remaining minutes balance. As an exception, purchase records may be retained in
-      minimal form for the period required by applicable tax and accounting regulations, as
-      described in Section 1.
+      and your remaining minutes balance. As an exception, (a) purchase records may be retained
+      in minimal form for the period required by applicable tax and accounting regulations, and
+      (b) the non-identifying free-trial signal described in Section 1 may also be retained to
+      prevent free-trial abuse — neither of which can be used to identify you or reconstruct
+      your account.
     </p>
   </section>
 
@@ -245,6 +267,9 @@
 </main>
 
 <footer>
+  <div class="footer-nav">
+    <a href="./index.html">Privacy Policy</a><span class="sep">·</span><a href="./terms.html">Terms and Conditions</a><span class="sep">·</span><a href="./support.html">Support</a>
+  </div>
   VY Digital Lab · iResumeMeet<br>
   <a href="mailto:support@vydigitalab.com">support@vydigitalab.com</a>
 </footer>
