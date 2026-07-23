@@ -107,6 +107,20 @@
     font-size: 13px;
   }
   footer a { color: var(--accent); }
+  .footer-nav {
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+  .footer-nav a {
+    color: var(--ink-secondary);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .footer-nav a:hover { color: var(--accent); }
+  .footer-nav .sep {
+    color: var(--rule);
+    margin: 0 8px;
+  }
   section ul.provider-list {
     margin: 12px 0 0;
     padding: 0;
@@ -176,7 +190,13 @@
       y/o identificador de cuenta. Este registro es necesario para acreditar tu saldo correctamente
       y para fines contables y de atención al cliente, y puede conservarse durante el período
       requerido por las normativas fiscales y contables aplicables aunque más adelante solicites la
-      eliminación de tu cuenta.
+      eliminación de tu cuenta. Para evitar el abuso de nuestra asignación gratuita única de
+      prueba, también conservamos una señal técnica no identificable: un hash criptográfico de un
+      solo sentido de tu identificador de dispositivo y/o cuenta, que no puede revertirse para
+      revelar ninguno de los dos, y que indica que ya se reclamó una prueba gratuita. Esta señal
+      no contiene información personal por sí misma y se conserva incluso después de eliminar la
+      cuenta, únicamente para reconocer un dispositivo o cuenta que ya haya recibido la
+      asignación gratuita.
     </p>
   </section>
 
@@ -231,9 +251,11 @@
     <p>
       Tenés control total sobre tu información. Podés solicitar la eliminación completa de tu
       cuenta de nuestros servidores en cualquier momento, lo cual eliminará tu dirección de correo
-      asociada y tu saldo de minutos restante. Como excepción, los registros de compra pueden
+      asociada y tu saldo de minutos restante. Como excepción, (a) los registros de compra pueden
       conservarse de forma mínima durante el período requerido por las normativas fiscales y
-      contables aplicables, según lo descrito en la Sección 1.
+      contables aplicables, y (b) la señal no identificable contra el abuso de la prueba gratuita
+      descrita en la Sección 1 también puede conservarse para evitar dicho abuso — ninguna de las
+      dos puede utilizarse para identificarte ni para reconstruir tu cuenta.
     </p>
   </section>
 
@@ -247,6 +269,9 @@
 </main>
 
 <footer>
+  <div class="footer-nav">
+    <a href="./privacy-es.html">Política de Privacidad</a><span class="sep">·</span><a href="./terms-es.html">Términos y Condiciones</a><span class="sep">·</span><a href="./support-es.html">Soporte</a>
+  </div>
   VY Digital Lab · iResumeMeet<br>
   <a href="mailto:support@vydigitalab.com">support@vydigitalab.com</a>
 </footer>
